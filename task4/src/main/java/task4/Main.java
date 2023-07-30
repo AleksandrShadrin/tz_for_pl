@@ -17,6 +17,12 @@ public class Main {
                 .sorted(Integer::compare)
                 .collect(Collectors.toList());
 
+        if(nums.size() <= 1)
+        {
+            System.out.println(0);
+            return;
+        }
+
         int mid = nums.size() / 2;
 
         List<Integer> toCheck = nums.size() % 2 == 0
