@@ -2,32 +2,32 @@ package task2;
 
 public class Circle {
     private double radius;
-    private Coord coord;
+    private Coordinate coordinate;
 
-    Circle(double radius, Coord coord) {
+    Circle(double radius, Coordinate coordinate) {
         this.radius = radius;
-        this.coord = coord;
+        this.coordinate = coordinate;
     }
 
-    public Coord getCoord() {
-        return coord;
+    public Coordinate getCoord() {
+        return coordinate;
     }
 
     public double getRadius() {
         return radius;
     }
 
-    public coordPosition checkCoordPosition(Coord toCheck) {
-        double equationRes = (coord.getX() - toCheck.getX())
-                * (coord.getX() - toCheck.getX())
-                + (coord.getY() - toCheck.getY())
-                * (coord.getY() - toCheck.getY()) - radius * radius;
+    public coordinatePosition checkCoordinatePosition(Coordinate toCheck) {
+        double equationRes = (coordinate.getX() - toCheck.getX())
+                * (coordinate.getX() - toCheck.getX())
+                + (coordinate.getY() - toCheck.getY())
+                * (coordinate.getY() - toCheck.getY()) - radius * radius;
 
         if (equationRes < 0)
-            return coordPosition.INSIDE_CIRCLE;
+            return coordinatePosition.INSIDE_CIRCLE;
         else if (equationRes == 0)
-            return coordPosition.ON_CIRCLE;
+            return coordinatePosition.ON_CIRCLE;
         else
-            return coordPosition.OUT_CIRCLE;
+            return coordinatePosition.OUT_CIRCLE;
     }
 }

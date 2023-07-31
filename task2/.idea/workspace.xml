@@ -10,14 +10,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="912897c9-c5bb-4b73-97dc-cb76e854fd75" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/task2_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../task1/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../task1/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../task1/task1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../task1/task1.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/task2/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/task2/Circle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/task2/Coord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/task2/Coordinate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/task2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/task2/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/task2/coordPosition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/task2/coordinatePosition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task2.jar" beforeDir="false" afterPath="$PROJECT_DIR$/task2.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../task3/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../task3/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../task3/task3.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../task3/task3.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,9 +58,9 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.3437751"
   }
 }]]></component>
   <component name="RunManager">
