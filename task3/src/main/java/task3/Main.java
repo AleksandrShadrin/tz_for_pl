@@ -36,7 +36,6 @@ public class Main {
             writeToFile(testsFilePath, content);
             writeToFile(currentFilePath, content);
         }
-
     }
 
     private static void writeToFile(String filePath, String content) {
