@@ -14,8 +14,8 @@ import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
-        List<TestEntity> tests = GetTests(args[0]);
-        Map<Integer, String> values = GetValues(args[1]);
+        List<TestEntity> tests = getTests(args[0]);
+        Map<Integer, String> values = getValues(args[1]);
 
         flatten(tests).forEach(t -> {
             if (values.containsKey(t.getId()))
@@ -72,7 +72,7 @@ public class Main {
         return result;
     }
 
-    private static List<TestEntity> GetTests(String testsPath) throws FileNotFoundException {
+    private static List<TestEntity> getTests(String testsPath) throws FileNotFoundException {
         Gson gson = new Gson();
         JsonReader testsReader = new JsonReader(new FileReader(testsPath));
 
@@ -83,7 +83,7 @@ public class Main {
         return tests.get("tests");
     }
 
-    private static Map<Integer, String> GetValues(String valuesPath) throws FileNotFoundException {
+    private static Map<Integer, String> getValues(String valuesPath) throws FileNotFoundException {
         Gson gson = new Gson();
         JsonReader valuesReader = new JsonReader(new FileReader(valuesPath));
 
