@@ -25,6 +25,6 @@ public class Main {
 
         result.stream()
                 .map(i -> array[i])
-                .forEach(System.out::println);
+                .forEach(System.out::print);
     }
 }
