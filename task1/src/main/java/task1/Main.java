@@ -9,22 +9,17 @@ public class Main {
         int n = Integer.parseInt(args[0]);
         int m = Integer.parseInt(args[1]);
 
-        Integer[] array = Stream.iterate(1, x -> x + 1)
-            .limit(n)
-            .toArray(Integer[]::new);
+        if(n < 1
+            || m < 1)
+            return;
 
-        ArrayList<Integer> result = new ArrayList<>();
-        result.add(0);
+        System.out.print(1);
 
         int lastIdx = (m - 1) % n;
 
         while (lastIdx != 0) {
-            result.add(lastIdx);
+            System.out.print(lastIdx + 1);
             lastIdx = (lastIdx + (m - 1)) % n;
         }
-
-        result.stream()
-                .map(i -> array[i])
-                .forEach(System.out::print);
     }
 }
