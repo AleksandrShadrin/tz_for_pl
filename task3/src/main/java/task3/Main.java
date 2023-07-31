@@ -13,7 +13,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class Main {
-    public static void main(String[] args) throws FileNotFoundException, UnsupportedEncodingException {
+    public static void main(String[] args) throws FileNotFoundException {
         List<TestEntity> tests = GetTests(args[0]);
         Map<Integer, String> values = GetValues(args[1]);
 
@@ -22,13 +22,21 @@ public class Main {
                 t.setValue(values.get(t.getId()));
         });
 
-        String filePath = Paths.get(getParentFolder(args[0]), "report.json").toString();
+        String testsFilePath = Paths.get(getParentFolder(args[0]), "report.json").toString();
+        String currentFilePath = Paths.get("report.json").toFile().getAbsolutePath();
+
         Map<String, List<TestEntity>> map = new TreeMap<String, List<TestEntity>>() {{
             put("tests", tests);
         }};
         String content = new Gson().toJson(map);
 
-        writeToFile(filePath, content);
+        if (testsFilePath.equals(currentFilePath))
+            writeToFile(testsFilePath, content);
+        else {
+            writeToFile(testsFilePath, content);
+            writeToFile(currentFilePath, content);
+        }
+
     }
 
     private static void writeToFile(String filePath, String content) {
