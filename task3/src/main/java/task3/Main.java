@@ -18,12 +18,14 @@ public class Main {
         Map<Integer, String> values = GetValues(args[1]);
 
         flatten(tests).forEach(t -> {
-            if(values.containsKey(t.getId()))
+            if (values.containsKey(t.getId()))
                 t.setValue(values.get(t.getId()));
         });
 
         String filePath = Paths.get(getParentFolder(args[0]), "report.json").toString();
-        Map<String, List<TestEntity>> map = new TreeMap<String, List<TestEntity>>(){{put("tests", tests);}};
+        Map<String, List<TestEntity>> map = new TreeMap<String, List<TestEntity>>() {{
+            put("tests", tests);
+        }};
         String content = new Gson().toJson(map);
 
         writeToFile(filePath, content);
@@ -47,21 +49,18 @@ public class Main {
 
     private static List<TestEntity> flatten(List<TestEntity> test) {
         return test.stream().map(t -> {
-           List<TestEntity> collection = new ArrayList<>();
-           return flatten(t, collection);
+            List<TestEntity> collection = new ArrayList<>();
+            return flatten(t, collection);
         }).flatMap(Collection::stream).collect(Collectors.toList());
     }
 
     private static List<TestEntity> flatten(TestEntity test, List<TestEntity> result) {
         result.add(test);
-        if(test.getValues() != null
-            && test.getValues().length > 0)
-        {
-            for (TestEntity testEntity:
-                 test.getValues()) {
+
+        if (test.getValues() != null)
+            for (TestEntity testEntity :
+                    test.getValues())
                 flatten(testEntity, result);
-            }
-        }
 
         return result;
     }
@@ -70,7 +69,8 @@ public class Main {
         Gson gson = new Gson();
         JsonReader testsReader = new JsonReader(new FileReader(testsPath));
 
-        Type testsList = new TypeToken<Map<String, ArrayList<TestEntity>>>(){}.getType();
+        Type testsList = new TypeToken<Map<String, ArrayList<TestEntity>>>() {
+        }.getType();
         Map<String, ArrayList<TestEntity>> tests = gson.fromJson(testsReader, testsList);
 
         return tests.get("tests");
@@ -80,7 +80,8 @@ public class Main {
         Gson gson = new Gson();
         JsonReader valuesReader = new JsonReader(new FileReader(valuesPath));
 
-        Type valuesList = new TypeToken<Map<String, ArrayList<ValueEntity>>>(){}.getType();
+        Type valuesList = new TypeToken<Map<String, ArrayList<ValueEntity>>>() {
+        }.getType();
         Map<String, ArrayList<ValueEntity>> values = gson.fromJson(valuesReader, valuesList);
 
         Map<Integer, String> dict = new HashMap<>();
